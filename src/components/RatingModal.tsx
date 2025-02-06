@@ -54,7 +54,7 @@ export default function RatingModal({ isOpen, onClose, gameTitle, onSubmit }: Ra
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Avaliar {gameTitle}</ModalHeader>
+        <ModalHeader color="brand.900" display='flex'  >Avaliar <Text marginLeft='2' color="brand.500">{gameTitle} </Text></ModalHeader>
         <ModalCloseButton />
         <ModalBody pb={6}>
           <VStack spacing={4} align="stretch">

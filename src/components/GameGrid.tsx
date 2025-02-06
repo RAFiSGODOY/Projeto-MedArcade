@@ -20,10 +20,10 @@ export default function GameGrid() {
   return (
     <Box>
       <Box textAlign="center" mb={12}>
-        <Heading as="h1" size="2xl" mb={4} color="brand.600">
-          Aprenda Medicina Jogando
+        <Heading as="h1" size="2xl" mb={4} color="brand.500">
+          Aprenda  Medicina Jogando
         </Heading>
-        <Text fontSize="xl" color="gray.600" maxW="2xl" mx="auto">
+        <Text fontSize="xl" color="gray.500" maxW="2xl" mx="auto">
           Explore nossa coleção de jogos educacionais desenvolvidos especialmente para profissionais e estudantes de medicina
         </Text>
       </Box>
@@ -40,33 +40,6 @@ export default function GameGrid() {
         ))}
       </SimpleGrid>
 
-      <Box bg="white" rounded="xl" p={8} shadow="sm">
-        <Heading size="lg" mb={6} color="brand.600">
-          Categorias em Destaque
-        </Heading>
-        <SimpleGrid columns={{ base: 2, md: 4 }} spacing={4}>
-          {categories.map((category) => (
-            <Box
-              key={category.name}
-              p={4}
-              bg="gray.50"
-              rounded="xl"
-              textAlign="center"
-              transition="all 0.2s"
-              _hover={{ bg: 'brand.50', transform: 'translateY(-2px)' }}
-              cursor="pointer"
-              onClick={() => setSelectedCategory(category.name)}
-            >
-              <Text fontWeight="medium" color="gray.900">
-                {category.name}
-              </Text>
-              <Text fontSize="sm" color="gray.500">
-                {category.count} jogos
-              </Text>
-            </Box>
-          ))}
-        </SimpleGrid>
-      </Box>
     </Box>
   )
 }

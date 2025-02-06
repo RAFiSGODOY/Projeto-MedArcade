@@ -68,7 +68,7 @@ export default function SiteFeedback() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Avalie o MedArcade</DrawerHeader>
+          <DrawerHeader color="brand.900">Avalie o MedArcade</DrawerHeader>
 
           <DrawerBody>
             <VStack spacing={4} align="stretch">
