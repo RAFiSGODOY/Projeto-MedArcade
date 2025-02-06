@@ -5,10 +5,7 @@ export const games = [
     title: 'Anatomia Interativa',
     description: 'Explore o corpo humano em 3D e aprenda sobre anatomia de forma interativa',
     category: 'Anatomia',
-    difficulty: 'Intermediário',
-    gameUrl: '/jogos/anatomia-interativa',
-    rating: 4.5,
-    ratingCount: 128
+    gameUrl: '/jogos/anatomia-interativa'
   },
   {
     id: 2,
@@ -16,10 +13,7 @@ export const games = [
     title: 'Quiz de Diagnóstico',
     description: 'Teste seus conhecimentos em diagnósticos médicos com casos reais',
     category: 'Diagnóstico',
-    difficulty: 'Avançado',
-    gameUrl: '/jogos/quiz-diagnostico',
-    rating: 4.8,
-    ratingCount: 256
+    gameUrl: '/jogos/quiz-diagnostico'
   },
   {
     id: 3,
@@ -27,10 +21,7 @@ export const games = [
     title: 'Simulador de Cirurgia',
     description: 'Pratique procedimentos cirúrgicos em um ambiente virtual seguro',
     category: 'Cirurgia',
-    difficulty: 'Avançado',
-    gameUrl: '/jogos/simulador-cirurgia',
-    rating: 4.7,
-    ratingCount: 184
+    gameUrl: '/jogos/simulador-de-cirurgia'
   }
 ]
 

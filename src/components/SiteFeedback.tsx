@@ -52,10 +52,10 @@ export default function SiteFeedback() {
 
   return (
     <>
-      <Box position="fixed" bottom="4" right="4">
+      <Box position="fixed" bottom="3" right="0">
         <Button
           onClick={onOpen}
-          colorScheme="brand"
+          colorScheme="orange"
           leftIcon={<Icon as={ChatIcon} />}
           size="lg"
           shadow="lg"
@@ -84,7 +84,7 @@ export default function SiteFeedback() {
                 h="150px"
               />
 
-              <Button colorScheme="brand" onClick={handleSubmit}>
+              <Button colorScheme="orange" onClick={handleSubmit}>
                 Enviar Feedback
               </Button>
             </VStack>

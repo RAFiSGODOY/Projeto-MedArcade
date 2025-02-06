@@ -2,43 +2,27 @@ import {
   Box,
   Image,
   Badge,
-  Text,
   Stack,
   Button,
   useColorModeValue,
   Heading,
-  Divider,
-  useDisclosure,
+  Divider
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import RatingStars from './RatingStars'
-import RatingModal from './RatingModal'
 
 interface GameCardProps {
   image: string
   title: string
-  description: string
   category: string
   gameUrl: string
-  rating: number
-  ratingCount: number
 }
 
 export default function GameCard({
   image,
   title,
-  description,
   category,
-  gameUrl,
-  rating,
-  ratingCount,
+  gameUrl
 }: GameCardProps) {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
-  const handleRatingSubmit = (newRating: number, comment: string) => {
-    // Here you would typically send the rating to your backend
-    console.log({ gameTitle: title, rating: newRating, comment })
-  }
 
   return (
     <>
@@ -46,6 +30,7 @@ export default function GameCard({
         maxW="sm"
         borderWidth="1px"
         borderRadius="lg"
+        borderColor={useColorModeValue('blue', 'white')}
         overflow="hidden"
         bg={useColorModeValue('white', 'gray.800')}
         transition="transform 0.2s"
@@ -60,44 +45,27 @@ export default function GameCard({
             right={2}
             px={2}
             py={1}
-            colorScheme="brand"
+            textColor="black"
+            bgColor="orange"
             borderRadius="full"
           >
             {category}
           </Badge>
         </Box>
-
         <Stack p={6} spacing={3}>
           <Heading size="md" color={useColorModeValue('gray.700', 'white')}>
             {title}
           </Heading>
-          <Text color={useColorModeValue('gray.600', 'gray.300')}>
-            {description}
-          </Text>
-          <Box
-            onClick={onOpen}
-            cursor="pointer"
-            _hover={{ opacity: 0.8 }}
-          >
-            <RatingStars rating={rating} count={ratingCount} />
-          </Box>
           <Divider />
           <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Link to={gameUrl}>
-              <Button rightIcon={<span>→</span>}>
+              <Button>
                 Jogar Agora
               </Button>
             </Link>
           </Stack>
         </Stack>
       </Box>
-
-      <RatingModal
-        isOpen={isOpen}
-        onClose={onClose}
-        gameTitle={title}
-        onSubmit={handleRatingSubmit}
-      />
     </>
   )
 }

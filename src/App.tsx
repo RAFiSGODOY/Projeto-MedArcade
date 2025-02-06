@@ -4,6 +4,7 @@ import { theme } from './theme'
 import Header from './components/Header'
 import GameGrid from './components/GameGrid'
 import SiteFeedback from './components/SiteFeedback'
+import  SimpleFooter from './components/SimpleFooter'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <GameGrid />
         </Container>
         <SiteFeedback />
+        <SimpleFooter />
       </BrowserRouter>
     </ChakraProvider>
   )

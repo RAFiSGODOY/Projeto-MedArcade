@@ -10,7 +10,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
   return (
     <InputGroup maxW="600px" mx="auto" mb={8}>
       <InputLeftElement pointerEvents="none">
-        <SearchIcon color="gray.400" />
+        <SearchIcon marginTop={2} color="blue.700" />
       </InputLeftElement>
       <Input
         value={value}
