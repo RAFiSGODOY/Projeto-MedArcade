@@ -27,9 +27,6 @@ export default function Header() {
               <Link to="/jogos">
                 <Button variant="ghost">Jogos</Button>
               </Link>
-              <Link to="/categorias">
-                <Button variant="ghost">Categorias</Button>
-              </Link>
               <Link to="/sobre">
                 <Button variant="ghost">Sobre</Button>
               </Link>

@@ -19,7 +19,6 @@ interface GameCardProps {
   title: string
   description: string
   category: string
-  difficulty: string
   gameUrl: string
   rating: number
   ratingCount: number
@@ -30,7 +29,6 @@ export default function GameCard({
   title,
   description,
   category,
-  difficulty,
   gameUrl,
   rating,
   ratingCount,
@@ -85,13 +83,6 @@ export default function GameCard({
           </Box>
           <Divider />
           <Stack direction="row" justifyContent="space-between" alignItems="center">
-            <Badge colorScheme={
-              difficulty === 'Básico' ? 'green' :
-              difficulty === 'Intermediário' ? 'yellow' :
-              'red'
-            }>
-              {difficulty}
-            </Badge>
             <Link to={gameUrl}>
               <Button rightIcon={<span>→</span>}>
                 Jogar Agora

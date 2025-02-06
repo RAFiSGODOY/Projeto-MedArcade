@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Heading, Text, Container } from '@chakra-ui/react'
+import { Box, SimpleGrid, Heading, Text } from '@chakra-ui/react'
 import { useState } from 'react'
 import GameCard from './GameCard'
 import SearchBar from './SearchBar'
@@ -8,15 +8,13 @@ import { games, categories } from '../data'
 export default function GameGrid() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('')
-  const [selectedDifficulty, setSelectedDifficulty] = useState('')
 
   const filteredGames = games.filter(game => {
     const matchesSearch = game.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          game.description.toLowerCase().includes(searchQuery.toLowerCase())
     const matchesCategory = !selectedCategory || game.category === selectedCategory
-    const matchesDifficulty = !selectedDifficulty || game.difficulty === selectedDifficulty
     
-    return matchesSearch && matchesCategory && matchesDifficulty
+    return matchesSearch && matchesCategory
   })
 
   return (
@@ -33,9 +31,7 @@ export default function GameGrid() {
       <SearchBar value={searchQuery} onChange={setSearchQuery} />
       <FilterBar
         selectedCategory={selectedCategory}
-        selectedDifficulty={selectedDifficulty}
         onCategoryChange={setSelectedCategory}
-        onDifficultyChange={setSelectedDifficulty}
       />
 
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8} mb={12}>
